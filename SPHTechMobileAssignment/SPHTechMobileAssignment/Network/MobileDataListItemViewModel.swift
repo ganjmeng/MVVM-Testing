@@ -16,6 +16,7 @@ protocol MobileDataListItemViewModelOutput {
     var year: String { get }
     var total: Double { get }
     var records: [Records] { get }
+    var decreaseRecords: [Records] { get }
     var isDecrease: Bool{ get }
 }
 
@@ -27,12 +28,15 @@ final class DefaultMobileDataListItemViewModel: MobileDataListItemViewModel {
     let year: String
     let total: Double
     let records: [Records]
+    let decreaseRecords : [Records]
     var isDecrease: Bool
+    
 
     init(model: DisplayModel) {
         self.year = model.year!
         self.total = model.total!
         self.records = model.records!
+        self.decreaseRecords = model.decreaseRecords!
         self.isDecrease = model.isDecrease!
     }
 }

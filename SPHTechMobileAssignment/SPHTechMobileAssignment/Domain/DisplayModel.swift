@@ -12,16 +12,18 @@ class DisplayModel {
     var total: Double?
     var records: [Records]?
     var isDecrease: Bool?
+    var decreaseRecords : [Records]?
     
-    init(year: String?, total: Double?, records: [Records]?, isDecrease:Bool?) {
+    
+    init(year: String?, total: Double?, records: [Records]?, isDecrease:Bool?, decreaseRecords: [Records]?) {
         self.year = year
         self.total = total
         self.records = records
         self.isDecrease = isDecrease
+        self.decreaseRecords = decreaseRecords
     }
     
-    class func getTableViewRecords(responseItems: [Records]?) -> [DisplayModel]  {
-        // Filtering API DATA and converting for Tableview display
+    class func filteringRecords(responseItems: [Records]?) -> [DisplayModel]  {
         var records: [String: [Records]] = [:]
         if let res = responseItems, let count = responseItems?.count, count > 0 {
             for item in res {
@@ -38,26 +40,29 @@ class DisplayModel {
         var tableViewRecords: [DisplayModel] = []
         var year:String
         var isDecrease:Bool = false
-        var tot: Double = 0.0
+        var total: Double = 0.0
         var pVal:Double = 0.0
+        var decreaseRecords : [Records] = []
         for (k, vals) in records {
             year = k
             isDecrease = false
-            tot = 0.0
+            total = 0.0
             pVal = 0.0
+            decreaseRecords = [Records]()
             for val in vals {
                 if let q = val.volume_of_mobile_data {
-                    tot += Double(q)!
+                    total += Double(q)!
                     if Double(q)!   < pVal {
                         isDecrease = true
+                        decreaseRecords.append(val)
                     }
                     pVal = Double(q)!
                 }
             }
             
-            if tot != 0, let ye = Int(year),  ye > 2003{
+            if total != 0, let y = Int(year),  y > 2003{
                 // Add new data record - to display in tableview
-                tableViewRecords.append(DisplayModel.init(year: year, total: tot, records: vals, isDecrease: isDecrease))
+                tableViewRecords.append(DisplayModel.init(year: year, total: total, records: vals, isDecrease: isDecrease, decreaseRecords:decreaseRecords))
             }
         }
         return tableViewRecords.sorted(by:{

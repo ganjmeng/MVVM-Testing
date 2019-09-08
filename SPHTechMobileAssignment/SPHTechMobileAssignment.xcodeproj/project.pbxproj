@@ -38,6 +38,8 @@
 		DD41FF1E2324C60B00CD4092 /* MobileDataListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */; };
 		DD41FF202324C83800CD4092 /* DisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF1F2324C83800CD4092 /* DisplayModel.swift */; };
 		DD41FF222324D5A400CD4092 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF212324D5A400CD4092 /* Alertable.swift */; };
+		DD41FF252324E38700CD4092 /* MobileDataListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF232324E38700CD4092 /* MobileDataListCell.swift */; };
+		DD41FF262324E38700CD4092 /* MobileDataListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD41FF242324E38700CD4092 /* MobileDataListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListItemViewModel.swift; sourceTree = "<group>"; };
 		DD41FF1F2324C83800CD4092 /* DisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModel.swift; sourceTree = "<group>"; };
 		DD41FF212324D5A400CD4092 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		DD41FF232324E38700CD4092 /* MobileDataListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListCell.swift; sourceTree = "<group>"; };
+		DD41FF242324E38700CD4092 /* MobileDataListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileDataListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,8 @@
 				DD41FF132323F55200CD4092 /* MobileDataListViewModel.swift */,
 				DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */,
 				DD41FF192323FB6800CD4092 /* MobileDataListViewController.swift */,
+				DD41FF232324E38700CD4092 /* MobileDataListCell.swift */,
+				DD41FF242324E38700CD4092 /* MobileDataListCell.xib */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD41FECC2323E97400CD4092 /* LaunchScreen.storyboard in Resources */,
+				DD41FF262324E38700CD4092 /* MobileDataListCell.xib in Resources */,
 				DD41FEC92323E97400CD4092 /* Assets.xcassets in Resources */,
 				DD41FEC72323E97300CD4092 /* Main.storyboard in Resources */,
 			);
@@ -369,6 +376,7 @@
 				DD41FF122323F2C300CD4092 /* FindMobileDataUseCase.swift in Sources */,
 				DD41FEF82323EA0400CD4092 /* NetworkConfig.swift in Sources */,
 				DD41FEC42323E97300CD4092 /* ViewController.swift in Sources */,
+				DD41FF252324E38700CD4092 /* MobileDataListCell.swift in Sources */,
 				DD41FF0A2323EE9C00CD4092 /* Fields.swift in Sources */,
 				DD41FF142323F55200CD4092 /* MobileDataListViewModel.swift in Sources */,
 				DD41FEFF2323EB7E00CD4092 /* AppAppearance.swift in Sources */,

@@ -14,7 +14,7 @@ enum MobileDataListViewModelRoute {
 
 enum MobileDataListViewModelLoading {
     case none
-    case fullScreen
+    case initial
     case nextPage
 }
 
@@ -50,7 +50,7 @@ final class DefaultMobileDataListViewModel: MobileDataListViewModel {
     
     private let findMobileDataUseCase: FindMobileDataUseCase
     private var dataLoadTask: Cancellable? { willSet { dataLoadTask?.cancel() } }
-    
+    private var responseItems:[Records]=[Records]()
     // MARK: - OUTPUT
     let route: Observable<MobileDataListViewModelRoute> = Observable(.initial)
     let items: Observable<[DefaultMobileDataListItemViewModel]> = Observable([DefaultMobileDataListItemViewModel]())
@@ -66,14 +66,19 @@ final class DefaultMobileDataListViewModel: MobileDataListViewModel {
     private func appendPage(mobileData: MobileDataUsage) {
         self.currentPage = (mobileData.result?.offset)! / LIMIT
         self.totalPageCount = (mobileData.result?.total)! / LIMIT
-        let disPlayItems = DisplayModel.getTableViewRecords(responseItems: mobileData.result?.records)
-        self.items.value = items.value + disPlayItems.map { DefaultMobileDataListItemViewModel(model: $0)};
+        responseItems.append(contentsOf: mobileData.result?.records ?? []);
+        
+        let disPlayItems = DisplayModel.filteringRecords(responseItems: responseItems)
+        self.items.value = disPlayItems.map { DefaultMobileDataListItemViewModel(model: $0)};
     }
     
     private func resetPages() {
         currentPage = -1
         totalPageCount = 1
-        items.value.removeAll()
+        responseItems.removeAll()
+        if (items.value.count > 0){
+            items.value.removeAll()
+        }
     }
     
     private func load(limit: Int, loadingType: MobileDataListViewModelLoading) {
@@ -84,11 +89,14 @@ final class DefaultMobileDataListViewModel: MobileDataListViewModel {
             guard let strongSelf = self else { return }
             switch result {
             case .success(let mobileData):
-                strongSelf.appendPage(mobileData: mobileData)
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                    strongSelf.appendPage(mobileData: mobileData)
+                    strongSelf.loadingType.value = .none
+                }
             case .failure(let error):
                 strongSelf.handle(error: error)
+                strongSelf.loadingType.value = .none
             }
-            strongSelf.loadingType.value = .none
         }
     }
     
@@ -98,7 +106,7 @@ final class DefaultMobileDataListViewModel: MobileDataListViewModel {
     
     private func update(limit: Int) {
         resetPages()
-        load(limit: LIMIT, loadingType: .fullScreen)
+        load(limit: LIMIT, loadingType: .initial)
     }
 }
 
