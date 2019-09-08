@@ -155,10 +155,11 @@
 		DD41FEC02323E97300CD4092 /* SPHTechMobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				DD41FF002323ECA600CD4092 /* Domain */,
 				DD41FEFD2323EAB800CD4092 /* Application */,
+				DD41FF3023251B5800CD4092 /* Presentation */,
+				DD41FF002323ECA600CD4092 /* Domain */,
 				DD41FEF02323E9B700CD4092 /* Common */,
-				DD41FEEF2323E98B00CD4092 /* Network */,
+				DD41FEEF2323E98B00CD4092 /* Data */,
 				DD41FEC32323E97300CD4092 /* ViewController.swift */,
 				DD41FEC52323E97300CD4092 /* Main.storyboard */,
 				DD41FEC82323E97400CD4092 /* Assets.xcassets */,
@@ -186,27 +187,16 @@
 			path = SPHTechMobileAssignmentUITests;
 			sourceTree = "<group>";
 		};
-		DD41FEEF2323E98B00CD4092 /* Network */ = {
+		DD41FEEF2323E98B00CD4092 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DD41FF29232510D300CD4092 /* Reachability.swift */,
+				DD41FF3523251C0600CD4092 /* Network */,
+				DD41FF3423251BC700CD4092 /* Cache */,
 				DD41FEF32323EA0400CD4092 /* DataTransferService.swift */,
 				DD41FEF52323EA0400CD4092 /* Endpoint.swift */,
-				DD41FEF42323EA0400CD4092 /* NetworkConfig.swift */,
-				DD41FEF62323EA0400CD4092 /* NetworkService.swift */,
 				DD41FF0B2323EF1900CD4092 /* APIEndpoints.swift */,
-				DD41FF0D2323F0C500CD4092 /* MobileDatasRepository.swift */,
-				DD41FF0F2323F0EE00CD4092 /* MobileDatasRepositoryInterfaces.swift */,
-				DD41FF112323F2C300CD4092 /* FindMobileDataUseCase.swift */,
-				DD41FF132323F55200CD4092 /* MobileDataListViewModel.swift */,
-				DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */,
-				DD41FF192323FB6800CD4092 /* MobileDataListViewController.swift */,
-				DD41FF232324E38700CD4092 /* MobileDataListCell.swift */,
-				DD41FF242324E38700CD4092 /* MobileDataListCell.xib */,
-				DD41FF2723250EB100CD4092 /* SPHCacheManager.swift */,
-				DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */,
 			);
-			path = Network;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		DD41FEF02323E9B700CD4092 /* Common */ = {
@@ -234,6 +224,8 @@
 		DD41FF002323ECA600CD4092 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DD41FF2E23251B2300CD4092 /* Interfaces */,
+				DD41FF2D23251B0A00CD4092 /* UseCases */,
 				DD41FF052323EE9C00CD4092 /* Fields.swift */,
 				DD41FF042323EE9C00CD4092 /* Links.swift */,
 				DD41FF022323EE9C00CD4092 /* MobileDataUsage.swift */,
@@ -242,6 +234,78 @@
 				DD41FF1F2324C83800CD4092 /* DisplayModel.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		DD41FF2D23251B0A00CD4092 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF112323F2C300CD4092 /* FindMobileDataUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DD41FF2E23251B2300CD4092 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF0F2323F0EE00CD4092 /* MobileDatasRepositoryInterfaces.swift */,
+				DD41FF0D2323F0C500CD4092 /* MobileDatasRepository.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		DD41FF3023251B5800CD4092 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF3123251B6500CD4092 /* Scene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DD41FF3123251B6500CD4092 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF3323251B8E00CD4092 /* View */,
+				DD41FF3223251B7F00CD4092 /* ViewModel */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		DD41FF3223251B7F00CD4092 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */,
+				DD41FF132323F55200CD4092 /* MobileDataListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD41FF3323251B8E00CD4092 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF192323FB6800CD4092 /* MobileDataListViewController.swift */,
+				DD41FF232324E38700CD4092 /* MobileDataListCell.swift */,
+				DD41FF242324E38700CD4092 /* MobileDataListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD41FF3423251BC700CD4092 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF2723250EB100CD4092 /* SPHCacheManager.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		DD41FF3523251C0600CD4092 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF29232510D300CD4092 /* Reachability.swift */,
+				DD41FEF42323EA0400CD4092 /* NetworkConfig.swift */,
+				DD41FEF62323EA0400CD4092 /* NetworkService.swift */,
+				DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
