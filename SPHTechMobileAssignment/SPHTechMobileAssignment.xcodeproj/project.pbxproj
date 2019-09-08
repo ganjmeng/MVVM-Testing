@@ -30,11 +30,14 @@
 		DD41FF0E2323F0C500CD4092 /* MobileDatasRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF0D2323F0C500CD4092 /* MobileDatasRepository.swift */; };
 		DD41FF102323F0EE00CD4092 /* MobileDatasRepositoryInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF0F2323F0EE00CD4092 /* MobileDatasRepositoryInterfaces.swift */; };
 		DD41FF122323F2C300CD4092 /* FindMobileDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF112323F2C300CD4092 /* FindMobileDataUseCase.swift */; };
-		DD41FF142323F55200CD4092 /* MobileDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF132323F55200CD4092 /* MobileDataViewModel.swift */; };
+		DD41FF142323F55200CD4092 /* MobileDataListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF132323F55200CD4092 /* MobileDataListViewModel.swift */; };
 		DD41FF162323F9CB00CD4092 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF152323F9CB00CD4092 /* DependencyContainer.swift */; };
 		DD41FF182323FA3000CD4092 /* MobileDataSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF172323FA3000CD4092 /* MobileDataSceneDIContainer.swift */; };
 		DD41FF1A2323FB6800CD4092 /* MobileDataListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF192323FB6800CD4092 /* MobileDataListViewController.swift */; };
 		DD41FF1C232406F500CD4092 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF1B232406F500CD4092 /* Observable.swift */; };
+		DD41FF1E2324C60B00CD4092 /* MobileDataListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */; };
+		DD41FF202324C83800CD4092 /* DisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF1F2324C83800CD4092 /* DisplayModel.swift */; };
+		DD41FF222324D5A400CD4092 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF212324D5A400CD4092 /* Alertable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,11 +87,14 @@
 		DD41FF0D2323F0C500CD4092 /* MobileDatasRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDatasRepository.swift; sourceTree = "<group>"; };
 		DD41FF0F2323F0EE00CD4092 /* MobileDatasRepositoryInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDatasRepositoryInterfaces.swift; sourceTree = "<group>"; };
 		DD41FF112323F2C300CD4092 /* FindMobileDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMobileDataUseCase.swift; sourceTree = "<group>"; };
-		DD41FF132323F55200CD4092 /* MobileDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataViewModel.swift; sourceTree = "<group>"; };
+		DD41FF132323F55200CD4092 /* MobileDataListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListViewModel.swift; sourceTree = "<group>"; };
 		DD41FF152323F9CB00CD4092 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		DD41FF172323FA3000CD4092 /* MobileDataSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataSceneDIContainer.swift; sourceTree = "<group>"; };
 		DD41FF192323FB6800CD4092 /* MobileDataListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListViewController.swift; sourceTree = "<group>"; };
 		DD41FF1B232406F500CD4092 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListItemViewModel.swift; sourceTree = "<group>"; };
+		DD41FF1F2324C83800CD4092 /* DisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModel.swift; sourceTree = "<group>"; };
+		DD41FF212324D5A400CD4092 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +187,8 @@
 				DD41FF0D2323F0C500CD4092 /* MobileDatasRepository.swift */,
 				DD41FF0F2323F0EE00CD4092 /* MobileDatasRepositoryInterfaces.swift */,
 				DD41FF112323F2C300CD4092 /* FindMobileDataUseCase.swift */,
-				DD41FF132323F55200CD4092 /* MobileDataViewModel.swift */,
+				DD41FF132323F55200CD4092 /* MobileDataListViewModel.swift */,
+				DD41FF1D2324C60B00CD4092 /* MobileDataListItemViewModel.swift */,
 				DD41FF192323FB6800CD4092 /* MobileDataListViewController.swift */,
 			);
 			path = Network;
@@ -190,6 +197,7 @@
 		DD41FEF02323E9B700CD4092 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DD41FF212324D5A400CD4092 /* Alertable.swift */,
 				DD41FF1B232406F500CD4092 /* Observable.swift */,
 				DD41FEF12323E9C900CD4092 /* Cancelable.swift */,
 			);
@@ -216,6 +224,7 @@
 				DD41FF022323EE9C00CD4092 /* MobileDataUsage.swift */,
 				DD41FF012323EE9C00CD4092 /* Records.swift */,
 				DD41FF032323EE9C00CD4092 /* MobileDataResult.swift */,
+				DD41FF1F2324C83800CD4092 /* DisplayModel.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -355,12 +364,13 @@
 				DD41FF072323EE9C00CD4092 /* MobileDataUsage.swift in Sources */,
 				DD41FF162323F9CB00CD4092 /* DependencyContainer.swift in Sources */,
 				DD41FF182323FA3000CD4092 /* MobileDataSceneDIContainer.swift in Sources */,
+				DD41FF202324C83800CD4092 /* DisplayModel.swift in Sources */,
 				DD41FEF72323EA0400CD4092 /* DataTransferService.swift in Sources */,
 				DD41FF122323F2C300CD4092 /* FindMobileDataUseCase.swift in Sources */,
 				DD41FEF82323EA0400CD4092 /* NetworkConfig.swift in Sources */,
 				DD41FEC42323E97300CD4092 /* ViewController.swift in Sources */,
 				DD41FF0A2323EE9C00CD4092 /* Fields.swift in Sources */,
-				DD41FF142323F55200CD4092 /* MobileDataViewModel.swift in Sources */,
+				DD41FF142323F55200CD4092 /* MobileDataListViewModel.swift in Sources */,
 				DD41FEFF2323EB7E00CD4092 /* AppAppearance.swift in Sources */,
 				DD41FF092323EE9C00CD4092 /* Links.swift in Sources */,
 				DD41FEF22323E9C900CD4092 /* Cancelable.swift in Sources */,
@@ -368,12 +378,14 @@
 				DD41FEF92323EA0400CD4092 /* Endpoint.swift in Sources */,
 				DD41FF0E2323F0C500CD4092 /* MobileDatasRepository.swift in Sources */,
 				DD41FF102323F0EE00CD4092 /* MobileDatasRepositoryInterfaces.swift in Sources */,
+				DD41FF222324D5A400CD4092 /* Alertable.swift in Sources */,
 				DD41FEC22323E97300CD4092 /* AppDelegate.swift in Sources */,
 				DD41FF1A2323FB6800CD4092 /* MobileDataListViewController.swift in Sources */,
 				DD41FEFC2323EAAE00CD4092 /* AppConfigurations.swift in Sources */,
 				DD41FF062323EE9C00CD4092 /* Records.swift in Sources */,
 				DD41FEFA2323EA0400CD4092 /* NetworkService.swift in Sources */,
 				DD41FF1C232406F500CD4092 /* Observable.swift in Sources */,
+				DD41FF1E2324C60B00CD4092 /* MobileDataListItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
