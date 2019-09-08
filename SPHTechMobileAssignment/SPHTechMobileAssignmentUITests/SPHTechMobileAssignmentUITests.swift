@@ -24,6 +24,11 @@ class SPHTechMobileAssignmentUITests: XCTestCase {
 
     // NOTE: for UI tests to work the keyboard of simulator must be on.
     // Keyboard shortcut COMMAND + SHIFT + K while simulator has focus
+    func test_navTitle() {
+        let app = XCUIApplication()
+        XCTAssertTrue(app.navigationBars["Mobile Data Usage"].otherElements["Mobile Data Usage"].exists)
+    }
+    
     func testAlert_whenClickCellShowAlert_thenClickOKDismiss() {
         
         let app = XCUIApplication()
@@ -34,12 +39,19 @@ class SPHTechMobileAssignmentUITests: XCTestCase {
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["2011-Q1    3.466228\n2011-Q2    3.380723\n2011-Q3    3.713792\n2011-Q4    4.07796"]/*[[".cells[\"Result row 8\"].staticTexts[\"2011-Q1    3.466228\\n2011-Q2    3.380723\\n2011-Q3    3.713792\\n2011-Q4    4.07796\"]",".staticTexts[\"2011-Q1    3.466228\\n2011-Q2    3.380723\\n2011-Q3    3.713792\\n2011-Q4    4.07796\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         // Make sure alert show and dismiss
-         XCTAssertTrue(app.alerts["2011 Mobile data useage"].waitForExistence(timeout: 5))
+         XCTAssertTrue(app.alerts["2011 Mobile data useage"].exists)
         
          app.alerts["2011 Mobile data useage"].buttons["OK"].tap()
         
-         XCTAssertFalse(app.alerts["2011 Mobile data useage"].waitForExistence(timeout: 5))
+         XCTAssertFalse(app.alerts["2011 Mobile data useage"].exists)
 
     }
-
+    
+    func test_tableViewCellsCount() {
+        let app = XCUIApplication()
+        app.swipeUp()
+        let cells = app.tables.cells
+        XCTAssertTrue(cells.count > 10)
+    }
+    
 }
