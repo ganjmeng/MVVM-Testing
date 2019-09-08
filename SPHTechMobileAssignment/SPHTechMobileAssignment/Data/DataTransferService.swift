@@ -14,7 +14,7 @@ public enum DataTransferError: Error {
     case networkFailure(NetworkError)
 }
 
-final public class DataEndpoint<T: Any>: Endpoint { }
+final public class DataEndpoint<T: Any>: Endpoint {}
 
 public protocol DataTransfer {
     @discardableResult

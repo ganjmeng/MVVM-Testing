@@ -12,7 +12,6 @@
 		DD41FEC72323E97300CD4092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41FEC52323E97300CD4092 /* Main.storyboard */; };
 		DD41FEC92323E97400CD4092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD41FEC82323E97400CD4092 /* Assets.xcassets */; };
 		DD41FECC2323E97400CD4092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41FECA2323E97400CD4092 /* LaunchScreen.storyboard */; };
-		DD41FED72323E97400CD4092 /* SPHTechMobileAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FED62323E97400CD4092 /* SPHTechMobileAssignmentTests.swift */; };
 		DD41FEE22323E97400CD4092 /* SPHTechMobileAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FEE12323E97400CD4092 /* SPHTechMobileAssignmentUITests.swift */; };
 		DD41FEF22323E9C900CD4092 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FEF12323E9C900CD4092 /* Cancelable.swift */; };
 		DD41FEF72323EA0400CD4092 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FEF32323EA0400CD4092 /* DataTransferService.swift */; };
@@ -43,6 +42,10 @@
 		DD41FF2823250EB100CD4092 /* SPHCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF2723250EB100CD4092 /* SPHCacheManager.swift */; };
 		DD41FF2A232510D300CD4092 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF29232510D300CD4092 /* Reachability.swift */; };
 		DD41FF2C2325127F00CD4092 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */; };
+		DD41FF462325207E00CD4092 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF3C23251F5F00CD4092 /* NetworkServiceTests.swift */; };
+		DD41FF472325208500CD4092 /* NetworkConfigurableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF3823251F0E00CD4092 /* NetworkConfigurableMock.swift */; };
+		DD41FF482325208800CD4092 /* NetworkSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF3A23251F1900CD4092 /* NetworkSessionMock.swift */; };
+		DD41FF492325209100CD4092 /* SPHTechMobileAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FED62323E97400CD4092 /* SPHTechMobileAssignmentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,9 @@
 		DD41FF2723250EB100CD4092 /* SPHCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHCacheManager.swift; sourceTree = "<group>"; };
 		DD41FF29232510D300CD4092 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		DD41FF3823251F0E00CD4092 /* NetworkConfigurableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurableMock.swift; sourceTree = "<group>"; };
+		DD41FF3A23251F1900CD4092 /* NetworkSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMock.swift; sourceTree = "<group>"; };
+		DD41FF3C23251F5F00CD4092 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 		DD41FED52323E97400CD4092 /* SPHTechMobileAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD41FF3623251EEE00CD4092 /* Network */,
 				DD41FED62323E97400CD4092 /* SPHTechMobileAssignmentTests.swift */,
 				DD41FED82323E97400CD4092 /* Info.plist */,
 			);
@@ -306,6 +313,24 @@
 				DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DD41FF3623251EEE00CD4092 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF3723251EF900CD4092 /* Mocks */,
+				DD41FF3C23251F5F00CD4092 /* NetworkServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DD41FF3723251EF900CD4092 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF3823251F0E00CD4092 /* NetworkConfigurableMock.swift */,
+				DD41FF3A23251F1900CD4092 /* NetworkSessionMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,7 +502,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD41FED72323E97400CD4092 /* SPHTechMobileAssignmentTests.swift in Sources */,
+				DD41FF492325209100CD4092 /* SPHTechMobileAssignmentTests.swift in Sources */,
+				DD41FF472325208500CD4092 /* NetworkConfigurableMock.swift in Sources */,
+				DD41FF462325207E00CD4092 /* NetworkServiceTests.swift in Sources */,
+				DD41FF482325208800CD4092 /* NetworkSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
