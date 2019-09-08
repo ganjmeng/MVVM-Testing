@@ -60,8 +60,7 @@ class DisplayModel {
                 }
             }
             
-            if total != 0, let y = Int(year),  y > 2003{
-                // Add new data record - to display in tableview
+            if total != 0 {
                 tableViewRecords.append(DisplayModel.init(year: year, total: total, records: vals, isDecrease: isDecrease, decreaseRecords:decreaseRecords))
             }
         }

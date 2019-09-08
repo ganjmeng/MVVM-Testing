@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SPHTechMobileAssignment/Network/MobileDataListViewController.swift"
-            timestampString = "589629514.711488"
+            timestampString = "589634143.1457469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "create(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SPHTechMobileAssignment/Network/FindMobileDataUseCase.swift"
-            timestampString = "589629514.711675"
+            timestampString = "589634143.145981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -73,103 +73,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SPHTechMobileAssignment/Network/MobileDataListViewModel.swift"
-            timestampString = "589629514.711813"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "load(limit:loadingType:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;SPHTechMobileAssignment.MobileDataUsage, Swift.Error&gt;) -&gt; () in SPHTechMobileAssignment.DefaultMobileDataListViewModel.(load in _7B67F01BE9804DECFDDE995A08E6B025)(limit: Swift.Int, loadingType: SPHTechMobileAssignment.MobileDataListViewModelLoading) -&gt; ()"
-                  moduleName = "SPHTechMobileAssignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jingmeng.gan/SPHTech-Mobile-Assignment/SPHTechMobileAssignment/SPHTechMobileAssignment/Network/MobileDataListViewModel.swift"
-                  timestampString = "589622251.946557"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "309">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;SPHTechMobileAssignment.MobileDataUsage, Swift.Error&gt;) -&gt; () in SPHTechMobileAssignment.DefaultMobileDataListViewModel.(load in _7B67F01BE9804DECFDDE995A08E6B025)(limit: Swift.Int, loadingType: SPHTechMobileAssignment.MobileDataListViewModelLoading) -&gt; ()"
-                  moduleName = "SPHTechMobileAssignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jingmeng.gan/SPHTech-Mobile-Assignment/SPHTechMobileAssignment/SPHTechMobileAssignment/Network/MobileDataListViewModel.swift"
-                  timestampString = "589622251.94929"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "351">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;SPHTechMobileAssignment.MobileDataUsage, Swift.Error&gt;) -&gt; () in SPHTechMobileAssignment.DefaultMobileDataListViewModel.(load in _7B67F01BE9804DECFDDE995A08E6B025)(limit: Swift.Int, loadingType: SPHTechMobileAssignment.MobileDataListViewModelLoading) -&gt; ()"
-                  moduleName = "SPHTechMobileAssignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jingmeng.gan/SPHTech-Mobile-Assignment/SPHTechMobileAssignment/SPHTechMobileAssignment/Network/MobileDataListViewModel.swift"
-                  timestampString = "589622251.9529541"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "442">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SPHTechMobileAssignment/Domain/DisplayModel.swift"
-            timestampString = "589629514.711881"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "filteringRecords(responseItems:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SPHTechMobileAssignment/Domain/DisplayModel.swift"
-            timestampString = "589629514.712328"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "filteringRecords(responseItems:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SPHTechMobileAssignment/Domain/DisplayModel.swift"
-            timestampString = "589629514.712594"
+            timestampString = "589634143.1461411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"

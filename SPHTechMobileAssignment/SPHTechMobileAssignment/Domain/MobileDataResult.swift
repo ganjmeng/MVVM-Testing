@@ -39,4 +39,8 @@ struct MobileDataResult : Codable {
         offset = try values.decodeIfPresent(Int.self, forKey: .offset)
     }
     
+    func encode(with aCoder: NSCoder) {
+        
+    }
+    
 }

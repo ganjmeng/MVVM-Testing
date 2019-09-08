@@ -7,6 +7,7 @@
 //
 
 import Foundation
+let MOBILE_DATA_STORE_KEY = "mobileData"
 
 enum MobileDataListViewModelRoute {
     case initial
@@ -39,7 +40,7 @@ final class DefaultMobileDataListViewModel: MobileDataListViewModel {
     private let LIMIT: Int = 40
     private(set) var currentPage: Int = -1
     private var totalPageCount: Int = 1
-    
+
     var hasMorePages: Bool {
         return currentPage < totalPageCount
     }
@@ -83,25 +84,52 @@ final class DefaultMobileDataListViewModel: MobileDataListViewModel {
     
     private func load(limit: Int, loadingType: MobileDataListViewModelLoading) {
         self.loadingType.value = loadingType
+        if NetworkingManager.isInterNetExist() == false {
+            guard items.value.count == 0 else {
+                
+                self.loadingType.value = .none
+                self.handle(error: "No Internet connection")
+                return
+            }
+            
+            self.handle(error: "No Internet connection")
+            SPHCacheManager.sharedInstance.getObjectForKey(MOBILE_DATA_STORE_KEY) { [weak self](result : MobileDataUsage?) in
+                guard let model = result else{
+                    print("获取失败了")
+                    return
+                }
+                self!.appendPage(mobileData: model)
+            }
+            
+            self.loadingType.value = .none
+            return
+        }
+        
         
         let mobileRequest = FindMobileDataUseCaseRequestValue(limit: limit, page: nextPage)
         dataLoadTask = findMobileDataUseCase.execute(requestValue: mobileRequest) { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success(let mobileData):
+                
+                //store first time data
+                if(strongSelf.loadingType.value == .initial) {
+                  SPHCacheManager.sharedInstance.setObject(mobileData, forKey: MOBILE_DATA_STORE_KEY)
+                }
+       
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                     strongSelf.appendPage(mobileData: mobileData)
                     strongSelf.loadingType.value = .none
                 }
             case .failure(let error):
-                strongSelf.handle(error: error)
+                strongSelf.handle(error: error.localizedDescription)
                 strongSelf.loadingType.value = .none
             }
         }
     }
     
-    private func handle(error: Error) {
-        self.error.value = "Failed loading data"
+    private func handle(error: String) {
+        self.error.value = error
     }
     
     private func update(limit: Int) {

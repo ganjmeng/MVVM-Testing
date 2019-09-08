@@ -40,6 +40,9 @@
 		DD41FF222324D5A400CD4092 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF212324D5A400CD4092 /* Alertable.swift */; };
 		DD41FF252324E38700CD4092 /* MobileDataListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF232324E38700CD4092 /* MobileDataListCell.swift */; };
 		DD41FF262324E38700CD4092 /* MobileDataListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD41FF242324E38700CD4092 /* MobileDataListCell.xib */; };
+		DD41FF2823250EB100CD4092 /* SPHCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF2723250EB100CD4092 /* SPHCacheManager.swift */; };
+		DD41FF2A232510D300CD4092 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF29232510D300CD4092 /* Reachability.swift */; };
+		DD41FF2C2325127F00CD4092 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		DD41FF212324D5A400CD4092 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		DD41FF232324E38700CD4092 /* MobileDataListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListCell.swift; sourceTree = "<group>"; };
 		DD41FF242324E38700CD4092 /* MobileDataListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileDataListCell.xib; sourceTree = "<group>"; };
+		DD41FF2723250EB100CD4092 /* SPHCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHCacheManager.swift; sourceTree = "<group>"; };
+		DD41FF29232510D300CD4092 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 		DD41FEEF2323E98B00CD4092 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DD41FF29232510D300CD4092 /* Reachability.swift */,
 				DD41FEF32323EA0400CD4092 /* DataTransferService.swift */,
 				DD41FEF52323EA0400CD4092 /* Endpoint.swift */,
 				DD41FEF42323EA0400CD4092 /* NetworkConfig.swift */,
@@ -196,6 +203,8 @@
 				DD41FF192323FB6800CD4092 /* MobileDataListViewController.swift */,
 				DD41FF232324E38700CD4092 /* MobileDataListCell.swift */,
 				DD41FF242324E38700CD4092 /* MobileDataListCell.xib */,
+				DD41FF2723250EB100CD4092 /* SPHCacheManager.swift */,
+				DD41FF2B2325127F00CD4092 /* NetworkingManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -370,10 +379,12 @@
 				DD41FF0C2323EF1900CD4092 /* APIEndpoints.swift in Sources */,
 				DD41FF072323EE9C00CD4092 /* MobileDataUsage.swift in Sources */,
 				DD41FF162323F9CB00CD4092 /* DependencyContainer.swift in Sources */,
+				DD41FF2C2325127F00CD4092 /* NetworkingManager.swift in Sources */,
 				DD41FF182323FA3000CD4092 /* MobileDataSceneDIContainer.swift in Sources */,
 				DD41FF202324C83800CD4092 /* DisplayModel.swift in Sources */,
 				DD41FEF72323EA0400CD4092 /* DataTransferService.swift in Sources */,
 				DD41FF122323F2C300CD4092 /* FindMobileDataUseCase.swift in Sources */,
+				DD41FF2A232510D300CD4092 /* Reachability.swift in Sources */,
 				DD41FEF82323EA0400CD4092 /* NetworkConfig.swift in Sources */,
 				DD41FEC42323E97300CD4092 /* ViewController.swift in Sources */,
 				DD41FF252324E38700CD4092 /* MobileDataListCell.swift in Sources */,
@@ -381,6 +392,7 @@
 				DD41FF142323F55200CD4092 /* MobileDataListViewModel.swift in Sources */,
 				DD41FEFF2323EB7E00CD4092 /* AppAppearance.swift in Sources */,
 				DD41FF092323EE9C00CD4092 /* Links.swift in Sources */,
+				DD41FF2823250EB100CD4092 /* SPHCacheManager.swift in Sources */,
 				DD41FEF22323E9C900CD4092 /* Cancelable.swift in Sources */,
 				DD41FF082323EE9C00CD4092 /* MobileDataResult.swift in Sources */,
 				DD41FEF92323EA0400CD4092 /* Endpoint.swift in Sources */,

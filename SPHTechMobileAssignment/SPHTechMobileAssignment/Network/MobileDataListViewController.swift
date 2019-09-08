@@ -9,6 +9,7 @@
 import UIKit
 
 class MobileDataListViewController: UITableViewController, Alertable {
+    
     private(set) var viewModel: MobileDataListViewModel!
     var nextPageLoadingSpinner: UIActivityIndicatorView?
     var items: [DefaultMobileDataListItemViewModel]! {
@@ -44,7 +45,6 @@ class MobileDataListViewController: UITableViewController, Alertable {
             self?.handle(route)
         }
         viewModel.items.observe(on: self) { [weak self] items in
-            print("items====", viewModel.items);
             self?.items = items;
         }
 
