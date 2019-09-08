@@ -46,6 +46,8 @@
 		DD41FF472325208500CD4092 /* NetworkConfigurableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF3823251F0E00CD4092 /* NetworkConfigurableMock.swift */; };
 		DD41FF482325208800CD4092 /* NetworkSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF3A23251F1900CD4092 /* NetworkSessionMock.swift */; };
 		DD41FF492325209100CD4092 /* SPHTechMobileAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FED62323E97400CD4092 /* SPHTechMobileAssignmentTests.swift */; };
+		DD41FF4C2325260700CD4092 /* FindMobileDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF4B2325260700CD4092 /* FindMobileDataUseCaseTests.swift */; };
+		DD41FF502325326900CD4092 /* MobileDataListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41FF4F2325326900CD4092 /* MobileDataListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		DD41FF3823251F0E00CD4092 /* NetworkConfigurableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurableMock.swift; sourceTree = "<group>"; };
 		DD41FF3A23251F1900CD4092 /* NetworkSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMock.swift; sourceTree = "<group>"; };
 		DD41FF3C23251F5F00CD4092 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		DD41FF4B2325260700CD4092 /* FindMobileDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMobileDataUseCaseTests.swift; sourceTree = "<group>"; };
+		DD41FF4F2325326900CD4092 /* MobileDataListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 		DD41FED52323E97400CD4092 /* SPHTechMobileAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD41FF4D2325321700CD4092 /* Presentation */,
+				DD41FF4A232525DA00CD4092 /* Damain */,
 				DD41FF3623251EEE00CD4092 /* Network */,
 				DD41FED62323E97400CD4092 /* SPHTechMobileAssignmentTests.swift */,
 				DD41FED82323E97400CD4092 /* Info.plist */,
@@ -331,6 +337,30 @@
 				DD41FF3A23251F1900CD4092 /* NetworkSessionMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DD41FF4A232525DA00CD4092 /* Damain */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF4B2325260700CD4092 /* FindMobileDataUseCaseTests.swift */,
+			);
+			path = Damain;
+			sourceTree = "<group>";
+		};
+		DD41FF4D2325321700CD4092 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF4E2325322A00CD4092 /* Scene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DD41FF4E2325322A00CD4092 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DD41FF4F2325326900CD4092 /* MobileDataListViewModelTests.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +534,9 @@
 			files = (
 				DD41FF492325209100CD4092 /* SPHTechMobileAssignmentTests.swift in Sources */,
 				DD41FF472325208500CD4092 /* NetworkConfigurableMock.swift in Sources */,
+				DD41FF4C2325260700CD4092 /* FindMobileDataUseCaseTests.swift in Sources */,
 				DD41FF462325207E00CD4092 /* NetworkServiceTests.swift in Sources */,
+				DD41FF502325326900CD4092 /* MobileDataListViewModelTests.swift in Sources */,
 				DD41FF482325208800CD4092 /* NetworkSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

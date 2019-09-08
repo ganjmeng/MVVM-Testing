@@ -8,9 +8,12 @@
 
 import Foundation
 let MOBILE_DATA_STORE_KEY = "mobileData"
+let LIMIT: Int = 40
 
 enum MobileDataListViewModelRoute {
     case initial
+    case showAlert(item: DefaultMobileDataListItemViewModel)
+
 }
 
 enum MobileDataListViewModelLoading {
@@ -37,7 +40,6 @@ protocol MobileDataListViewModelOutput {
 protocol MobileDataListViewModel: MobileDataListViewModelInput, MobileDataListViewModelOutput {}
 
 final class DefaultMobileDataListViewModel: MobileDataListViewModel {
-    private let LIMIT: Int = 40
     private(set) var currentPage: Int = -1
     private var totalPageCount: Int = 1
 
@@ -157,7 +159,7 @@ extension DefaultMobileDataListViewModel {
     
     
     func didSelect(item: DefaultMobileDataListItemViewModel) {
-
+        route.value = .showAlert(item: item)
     }
 }
 

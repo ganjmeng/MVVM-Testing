@@ -10,7 +10,7 @@ import Foundation
 struct MobileDataUsage : Codable {
     let help : String?
     let success : Bool?
-    let result : MobileDataResult?
+    var result : MobileDataResult?
     
     enum CodingKeys: String, CodingKey {
         

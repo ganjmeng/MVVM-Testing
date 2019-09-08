@@ -12,9 +12,9 @@ struct MobileDataResult : Codable {
     let fields : [Fields]?
     let records : [Records]?
     let _links : Links?
-    let limit : Int?
+    var limit : Int?
     let total : Int?
-    let offset: Int?
+    var offset: Int?
     
     enum CodingKeys: String, CodingKey {
         

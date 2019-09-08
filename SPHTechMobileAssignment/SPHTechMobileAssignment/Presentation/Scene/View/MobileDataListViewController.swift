@@ -132,6 +132,7 @@ extension MobileDataListViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView .deselectRow(at: indexPath, animated: true)
         viewModel.didSelect(item: items[indexPath.row])
     }
 }
@@ -143,6 +144,17 @@ extension MobileDataListViewController {
     func handle(_ route: MobileDataListViewModelRoute) {
         switch route {
         case .initial: break
+        case .showAlert(let item):
+            
+            let decre_strs = item.decreaseRecords.map({ "\(String(describing: $0.quarter!))" })
+            let decreaseStr = decre_strs.joined(separator: "\n") + "📉🔻"
+            
+            let strs = item.records.map({ "\(String(describing: $0.quarter!))    \(String(describing: $0.volume_of_mobile_data!))" })
+            let increaseStr = strs.joined(separator: "\n")
+            
+            showAlert(title: "\(item.year) Mobile data useage", message: item.isDecrease ? decreaseStr : increaseStr)
+
+            break
         }
     }
 }
