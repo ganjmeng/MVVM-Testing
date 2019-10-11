@@ -1,4 +1,4 @@
-# SPHTech-Mobile-Assignment
+# MVVM-POP-Testing
 SPHTech Mobile Assignment
 
 ## Requirements: 
